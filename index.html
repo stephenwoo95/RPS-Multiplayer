@@ -23,14 +23,65 @@
 			<h1><strong>Rock, Paper, Scissors ft. Firebase</strong></h1>
 		</div>
 
-
-
-
-
-
-
+		<div class="row">
+			<div class="col-sm-4">
+				<h2 class="text-center p1name">Player 1</h2>
+				<div class="well" id="player1">
+					<h3 class="text-center p1option" value="1">Rock</h3>
+					<h3 class="text-center p1option" value="1">Paper</h3>
+					<h3 class="text-center p1option" value="1">Scissors</h3>
+				</div>
+			</div>
+			<div class="col-sm-4" id="game">
+				<h4 class="text-center" id="gameStatus">Waiting for Another Player...</h4>
+				<div class="well" id="stats">
+					<h4 class="text-center"><span class="p1name">Player 1</span> wins: <span id="p1wins">0</span></h4>
+					<h4 class="text-center"><span class="p2name">Player 2</span> wins: <span id="p2wins">0</span></h4>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<h2 class="text-center p2name">Player 2</h2>
+				<div class="well" id="player2">
+					<h3 class="text-center p2option" value="2">Rock</h3>
+					<h3 class="text-center p2option" value="2">Paper</h3>
+					<h3 class="text-center p2option" value="2">Scissors</h3>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<span class="glyphicon glyphicon-trash"></span> Shit Talk
+					</div>
+					<div class="panel-body">
+						<div id="messages">
+						</div>
+						<input type="text" class="mytext" placeholder="Type a message"/>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
+
+	<div id="nameModal" class="modal">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                <h5 class="modal-title">Name Selection</h5>
+	            </div>
+	            <div class="modal-body">
+	                <p>Input a name of your choice.</p>
+	            </div>
+	            <div class="modal-footer">
+					<input type="text" class="nameInput" placeholder="Type your name" onkeydown="if(event.keyCode==13)$('.btn-xs').click()"/><button class="btn btn-primary btn-xs" data-dismiss="modal" onclick="addPlayer(event)">Submit</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>
